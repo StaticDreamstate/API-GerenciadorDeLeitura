@@ -1,0 +1,9 @@
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-10-09T21:37:39.565Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-10-09T21:37:40.288Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-10-09T21:57:55.107Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-10-09T21:57:55.548Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-10-13T00:31:59.474Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-10-13T00:32:00.349Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-10-13T00:36:29.386Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-10-13T00:36:29.521Z"}
+{"level":"info","message":"[cadastrar] Cliente cadastrado: ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-10-13T00:36:45.638Z"}
