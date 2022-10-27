@@ -6,6 +6,7 @@ const env = {
     DB_NAME: process.env.DB_NAME as string,
     DB_HOST: process.env.DB_HOST as string,
     DB_PORT: Number(process.env.DB_PORT),
+    KEY: process.env.KEY as string,
     DB_USER: process.env.DB_USER as string,
     DB_PASS: process.env.DB_PASS as string
 };
