@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
-import { ISBN } from "../../models";
-import { Autor, Editora, Livro } from "../../models";
+import { Autor, Editora, Livro, ISBN } from "../../models";
 import logger from "../../infra/conf/logger";
 
 const controller = {
@@ -71,7 +70,7 @@ const controller = {
       }
 
       if(novaPagina <= livro.pagina_atual) {
-        logger.error(`[setMarker] Pagina informada ${novaPagina} é menor que a página atual (${livro.pagina_atual})`);
+        logger.error(`[setMarker] Pagina informada ${novaPagina} é menor ou igual a página atual (${livro.pagina_atual})`);
         return res.status(400).json(`Você tentou atualizar a página para uma página menor do que a atual (${livro.pagina_atual})`);
       }
 

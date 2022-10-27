@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node release/main.js",
-    "dev": "ts-node-dev --respawn --ignore-watch node_modules development/main.ts --files"
+    "dev": "ts-node-dev --respawn --ignore-watch node_modules development/main.ts --files",
+    "clearlogs": "rm -f development/infra/logs/*"
   },
   "keywords": [],
   "author": "",
