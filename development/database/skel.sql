@@ -12,6 +12,15 @@ CREATE TABLE `MyBK`.`usuarios` (
 		PRIMARY KEY(`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
+CREATE TABLE `MyBK`.`isbn` (
+	`id` INT NOT NULL AUTO_INCREMENT,
+	`codigo` VARCHAR(200) NOT NULL,
+	`createdAt` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  	`updatedAt` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+		PRIMARY KEY(`id`)
+) ENGINE = InnoDB DEFAULT CHARSET = latin1;
+
+
 CREATE TABLE `MyBK`.`autores` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`nome` VARCHAR(100) NOT NULL,
@@ -31,7 +40,7 @@ CREATE TABLE `MyBK`.`editoras` (
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 
 
-CREATE TABLE `MyBK`.`livro` (
+CREATE TABLE `MyBK`.`livros` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`id_usuario` INT NOT NULL,
 	`nome` VARCHAR(400) NOT NULL,
@@ -39,10 +48,10 @@ CREATE TABLE `MyBK`.`livro` (
 	`editora_id` INT NOT NULL,
 	`ano` VARCHAR(10) NOT NULL,
 	`edicao` INT NOT NULL,
-	`ISBN` VARCHAR(200),
+	`isbn_id` INT NOT NULL,
 	`paginas` INT,
 	`pagina_atual` INT,
-	`total_lido` INT,
+	`restante` INT,
 	`palavras_chave` VARCHAR(200),
 	`createdAt` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   	`updatedAt` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -50,7 +59,9 @@ CREATE TABLE `MyBK`.`livro` (
 		KEY `FK_usuario` (`id_usuario`),
 		KEY `FK_autor` (`autor_id`),
 		KEY `FK_editora` (`editora_id`),
+		KEY `FK_isbn` (`isbn_id`),
 		CONSTRAINT `FK_usuario` FOREIGN KEY(`id_usuario`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE,
 		CONSTRAINT `FK_autor` FOREIGN KEY (`autor_id`) REFERENCES `autores` (`id`) ON DELETE CASCADE, 
-		CONSTRAINT `FK_editora` FOREIGN KEY (`editora_id`) REFERENCES `editoras` (`id`) ON DELETE CASCADE 
+		CONSTRAINT `FK_editora` FOREIGN KEY (`editora_id`) REFERENCES `editoras` (`id`) ON DELETE CASCADE,
+		CONSTRAINT `FK_isbn` FOREIGN KEY (`isbn_id`) REFERENCES `isbn` (`id`) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;

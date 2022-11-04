@@ -15,7 +15,7 @@ const controller = {
 
       if (savedUser) {
         logger.warn(`[cadastrar] Tentativa repetida de cadastro: ${req.socket.remoteAddress}`);
-        return res.status(400).json("Email já cadastrado no banco");
+        return res.status(400).json("Usuário já cadastrado no banco");
       }
 
       const newUser = await Usuario.instance.create({

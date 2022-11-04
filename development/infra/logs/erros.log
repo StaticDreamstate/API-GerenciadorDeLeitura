@@ -1,0 +1,56 @@
+{"level":"error","message":"[newBook]SequelizeDatabaseError: Table 'MyBK.isbn' doesn't exist","service":"user-service","timestamp":"2022-10-27T23:19:13.274Z"}
+{"level":"error","message":"[newBook]SequelizeDatabaseError: Unknown column 'ISBN.isbn' in 'where clause'","service":"user-service","timestamp":"2022-10-27T23:37:15.775Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id')","service":"user-service","timestamp":"2022-10-27T23:39:35.939Z"}
+{"level":"error","message":"[newBook]SequelizeValidationError: notNull Violation: Livros.autor_id cannot be null,\nnotNull Violation: Livros.editora_id cannot be null,\nnotNull Violation: Livros.pagina_atual cannot be null","service":"user-service","timestamp":"2022-10-27T23:43:16.829Z"}
+{"level":"error","message":"[newBook]SequelizeValidationError: notNull Violation: Livros.pagina_atual cannot be null","service":"user-service","timestamp":"2022-10-27T23:44:53.796Z"}
+{"level":"error","message":"[newBook]SequelizeValidationError: notNull Violation: Livros.pagina_atual cannot be null","service":"user-service","timestamp":"2022-10-27T23:45:34.761Z"}
+{"level":"error","message":"[newBook]SequelizeDatabaseError: Table 'MyBK.livros' doesn't exist","service":"user-service","timestamp":"2022-10-27T23:46:47.328Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id')","service":"user-service","timestamp":"2022-10-27T23:48:56.529Z"}
+{"level":"error","message":"[newBook]SequelizeDatabaseError: Incorrect integer value: 'Primeira' for column `MyBK`.`livros`.`edicao` at row 1","service":"user-service","timestamp":"2022-10-27T23:50:48.401Z"}
+{"level":"error","message":"[newBook]TypeError: models_1.Editora.instance.findOneAndUpdate is not a function","service":"user-service","timestamp":"2022-10-27T23:51:15.342Z"}
+{"level":"error","message":"[newBook]TypeError: models_1.Editora.instance.findOneAndUpdate is not a function","service":"user-service","timestamp":"2022-10-27T23:56:02.456Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id')","service":"user-service","timestamp":"2022-10-28T00:13:08.091Z"}
+{"level":"error","message":"[newBook]SequelizeDatabaseError: Incorrect integer value: 'Primeira' for column `MyBK`.`livros`.`edicao` at row 1","service":"user-service","timestamp":"2022-10-28T00:14:43.031Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id')","service":"user-service","timestamp":"2022-10-28T00:25:05.523Z"}
+{"level":"error","message":"[setMarker] Pagina informada 0 é menor ou igual a página atual (null)","service":"user-service","timestamp":"2022-10-28T00:31:56.039Z"}
+{"level":"error","message":"[setMarker]AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter","service":"user-service","timestamp":"2022-10-28T00:32:02.881Z"}
+{"level":"error","message":"[setMarker]AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter","service":"user-service","timestamp":"2022-10-28T00:33:00.022Z"}
+{"level":"error","message":"[setMarker]AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter","service":"user-service","timestamp":"2022-10-28T00:33:05.032Z"}
+{"level":"error","message":"[setMarker]AssertionError [ERR_ASSERTION]: Missing where attribute in the options parameter","service":"user-service","timestamp":"2022-10-28T00:33:06.420Z"}
+{"level":"error","message":"[purgeBook]Erro ao deletar livro do banco: TypeError: models_1.Livro.instance.deleteOne is not a function-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-10-28T00:34:33.882Z"}
+{"level":"error","message":"[purgeBook]Erro ao deletar livro do banco: TypeError: models_1.Livro.instance.delete is not a function-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-10-28T00:34:59.015Z"}
+{"level":"error","message":"[userAuthors]Erro de consulta (autores) : TypeError: models_1.Autor.instance.find is not a function-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-10-28T00:36:19.129Z"}
+{"level":"error","message":"[userAuthors]Erro de consulta (autores) : SequelizeDatabaseError: Unknown column 'Usuarios.id_usuario' in 'where clause'-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-10-28T00:36:56.579Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id') -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-10-28T00:52:54.129Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id') -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-10-28T00:53:18.729Z"}
+{"level":"error","message":"[setMarker] Livro blabla não encontrado.","service":"user-service","timestamp":"2022-10-28T01:11:12.556Z"}
+{"level":"error","message":"[setMarker] Pagina informada 50 é menor ou igual a página atual (50)","service":"user-service","timestamp":"2022-10-28T01:11:25.130Z"}
+{"level":"error","message":"[setMarker] Pagina informada 90 é menor ou igual a página atual (90)","service":"user-service","timestamp":"2022-10-28T01:13:46.647Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id') -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T03:57:05.652Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id') -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T03:58:44.627Z"}
+{"level":"error","message":"[purgeBook]Erro ao deletar livro do banco: TypeError: models_1.Livro.instance.delete is not a function-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:09:26.343Z"}
+{"level":"error","message":"[purgeBook]Erro ao deletar livro do banco: SequelizeDatabaseError: Unknown column 'Editoras.id_usuario' in 'where clause'-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:23:19.662Z"}
+{"level":"error","message":"[purgeBook]Erro ao deletar livro do banco: SequelizeDatabaseError: Unknown column 'Editoras.id_usuario' in 'where clause'-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:23:27.909Z"}
+{"level":"error","message":"[purgeBook]Erro ao deletar livro do banco: SequelizeDatabaseError: Unknown column 'Editoras.id_usuario' in 'where clause'-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:23:43.516Z"}
+{"level":"error","message":"[purgeBook]Erro ao deletar livro do banco: SequelizeValidationError: notNull Violation: Editoras.nome cannot be null-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:33:02.804Z"}
+{"level":"error","message":"[getBook]Erro fazer consulta de lista (livros): TypeError: models_1.Livro.instance.find is not a function-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:37:54.677Z"}
+{"level":"error","message":"[getBook]Erro fazer consulta de lista (livros): TypeError: models_1.Livro.instance.find is not a function-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:38:25.991Z"}
+{"level":"error","message":"[getBook]Erro fazer consulta de lista (livros): TypeError: models_1.Livro.instance.find is not a function-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:38:29.493Z"}
+{"level":"error","message":"[getBook]Erro fazer consulta de lista (livros): TypeError: models_1.Livro.instance.find is not a function-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:38:30.477Z"}
+{"level":"error","message":"[userPublishers]Erro de consulta (editoras) : SequelizeDatabaseError: Unknown column 'Editoras.id_usuario' in 'where clause'-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:50:25.007Z"}
+{"level":"error","message":"[userPublishers]Erro de consulta (editoras) : SequelizeDatabaseError: Unknown column 'Editoras.id_usuario' in 'where clause'-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:50:28.665Z"}
+{"level":"error","message":"[userBook]Erro de consulta (livros) : TypeError: Cannot read properties of null (reading 'id_usuario')-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T04:59:48.189Z"}
+{"level":"error","message":"[userBook]Erro de consulta (livros) : TypeError: Cannot read properties of undefined (reading 'length')-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-02T05:01:26.565Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id') -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T09:26:52.693Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id') -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T09:27:52.980Z"}
+{"level":"error","message":"[purgeBook]Livro Shell Script Profissional não encontrado. -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T09:49:29.666Z"}
+{"level":"error","message":"[purgeBook]Livro Pense em Python não encontrado. -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T09:50:01.639Z"}
+{"level":"error","message":"[purgeBook]Livro Pense em Python não encontrado. -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T09:50:15.982Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id') -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T09:51:18.835Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id') -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T10:01:44.261Z"}
+{"level":"error","message":"[purgeBook]Livro Pense em Python não encontrado. -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T10:03:10.030Z"}
+{"level":"error","message":"[purgeBook]Livro Pense em Python não encontrado. -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T10:03:43.983Z"}
+{"level":"error","message":"[purgeBook]Livro Pense em Python não encontrado. -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T10:03:54.073Z"}
+{"level":"error","message":"[purgeBook]Livro Pense em Python não encontrado. -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T10:04:52.791Z"}
+{"level":"error","message":"[purgeBook]Livro Pense em Python não encontrado. -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T10:06:02.590Z"}
+{"level":"error","message":"[purgeBook]Livro Pense em Python não encontrado. -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-04T10:06:18.315Z"}

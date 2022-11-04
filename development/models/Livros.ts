@@ -51,22 +51,23 @@ export default class Livros {
                     allowNull: false,
                 },
 
-                isbn: {
+                isbn_id: {
                     type: DataTypes.STRING(255),
                     allowNull: true,
+                    references: { model: "isbn", key: "id" }
                 },
 
                 paginas: {
                     type: DataTypes.INTEGER,
-                    allowNull: false,
+                    allowNull: true,
                 },
 
                 pagina_atual: {
                     type: DataTypes.INTEGER,
-                    allowNull: false,
+                    allowNull: true,
                 },
 
-                total_lido: {
+                restante: {
                     type: DataTypes.INTEGER,
                     allowNull: false,
                 },

@@ -19,8 +19,8 @@ export default class Usuarios {
           autoIncrement: true,
         },
 
-        isbn: {
-          type: DataTypes.STRING(255),
+        codigo: {
+          type: DataTypes.STRING(200),
           allowNull: false,
           unique: true,
         },
