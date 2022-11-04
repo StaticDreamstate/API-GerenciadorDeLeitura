@@ -24,7 +24,7 @@ const controller = {
                 const savedUser = yield models_1.Usuario.instance.findOne({ where: { login: login } });
                 if (savedUser) {
                     logger_1.default.warn(`[cadastrar] Tentativa repetida de cadastro: ${req.socket.remoteAddress}`);
-                    return res.status(400).json("Email já cadastrado no banco");
+                    return res.status(400).json("Usuário já cadastrado no banco");
                 }
                 const newUser = yield models_1.Usuario.instance.create({
                     nome,
