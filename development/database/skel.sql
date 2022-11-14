@@ -53,6 +53,7 @@ CREATE TABLE `MyBK`.`livros` (
 	`pagina_atual` INT,
 	`restante` INT,
 	`palavras_chave` VARCHAR(200),
+	`rate` TINYINT,
 	`createdAt` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   	`updatedAt` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 		PRIMARY KEY(`id`),

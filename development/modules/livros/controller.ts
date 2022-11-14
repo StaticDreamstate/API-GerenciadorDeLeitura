@@ -14,10 +14,10 @@ const controller = {
 
       const livro = await Livro.instance.findOne({ where: { nome: nome, id_usuario: id } });
 
-      if(livro) {
+      if (livro) {
 
-      logger.info(`[newBook]Livro já cadastrado nesta conta -  ${req.socket.remoteAddress}`);
-      return res.status(400).json(`Livro já cadastrado nesta conta.`);
+        logger.info(`[newBook]Livro já cadastrado nesta conta -  ${req.socket.remoteAddress}`);
+        return res.status(400).json(`Livro já cadastrado nesta conta.`);
 
       }
 
@@ -48,9 +48,10 @@ const controller = {
         edicao: edicao,
         isbn_id: nCodigo.id,
         paginas: paginas,
-        paginas_atual: 0,
-        restante: 0,
-        palavras_chave: palavrasChave
+        pagina_atual: Number(0),
+        restante: paginas,
+        palavras_chave: palavrasChave,
+        rate: Number(0)
       });
 
       await Editora.instance.update(
@@ -78,7 +79,7 @@ const controller = {
       const { nome, novaPagina } = req.body;
       const { id } = req.params;
 
-      const livro = await Livro.instance.findOne({where:{ id_usuario: Number(id), nome: nome }});
+      const livro = await Livro.instance.findOne({ where: { id_usuario: Number(id), nome: nome } });
 
       if (!livro) {
         logger.error(`[setMarker] Livro ${nome} não encontrado.`);
@@ -91,8 +92,8 @@ const controller = {
       }
 
       const novoTotal = Number(livro.paginas) - Number(novaPagina);
-      await Livro.instance.update({ pagina_atual: novaPagina, restante: novoTotal }, 
-        {where: {id_usuario: Number(id), nome: nome}});
+      await Livro.instance.update({ pagina_atual: novaPagina, restante: novoTotal },
+        { where: { id_usuario: Number(id), nome: nome } });
 
       logger.info(`[setMarker] Página ${livro.pagina_atual} do livro ${livro.nome} marcada`);
       return res.status(200).json(`Progresso registrado: ${novaPagina}`);
@@ -113,26 +114,26 @@ const controller = {
       const { nome, autor, editora } = req.body;
       const { id } = req.params;
 
-      let tmp = await Livro.instance.findOne({where: {nome: nome, id_usuario: id}}); 
+      let tmp = await Livro.instance.findOne({ where: { nome: nome, id_usuario: id } });
       console.log(tmp);
-      if(tmp) {
+      if (tmp) {
 
         await tmp.destroy({ where: { id_usuario: id, nome: nome } });
-        
-        tmp = await Editora.instance.findOne({where: {nome: editora}}); 
-        await tmp.update({ total_livros: (Number(tmp.total_livros)-1) });
-        
+
+        tmp = await Editora.instance.findOne({ where: { nome: editora } });
+        await tmp.update({ total_livros: (Number(tmp.total_livros) - 1) });
+
         if (tmp.total_livros <= 0) {
-          await Editora.instance.destroy({where: {nome: editora}});
+          await Editora.instance.destroy({ where: { nome: editora } });
         }
-      
-        tmp = await Autor.instance.findOne({where: {nome: autor}}); 
-        await tmp.update({ total_livros: (Number(tmp.total_livros)-1) });
-      
+
+        tmp = await Autor.instance.findOne({ where: { nome: autor } });
+        await tmp.update({ total_livros: (Number(tmp.total_livros) - 1) });
+
         if (tmp.total_livros <= 0) {
-          await Autor.instance.destroy({where: {nome: autor}});
+          await Autor.instance.destroy({ where: { nome: autor } });
         }
-     
+
         logger.info(`[purgeBook]Livro ${nome} deletado. -  ${req.socket.remoteAddress}`);
         return res.sendStatus(204);
 
@@ -158,11 +159,11 @@ const controller = {
       const { nome } = req.body;
       let myList;
 
-      if(nome.length > 0) {
+      if (nome.length > 0) {
         myList = await Livro.instance.findOne({ where: { id_usuario: id, nome: nome } });
       }
-      
-      else { 
+
+      else {
         myList = await Livro.instance.findAll({ where: { id_usuario: id } });
       }
 
@@ -174,8 +175,44 @@ const controller = {
       return res.status(500).json(`${error}`);
     }
 
+  },
+
+  async rateBook(req: Request, res: Response) {
+
+    try {
+
+      const { id } = req.params;
+      const { nome, nota } = req.body;
+      let bk;
+
+      if (nome.length > 0) {
+        bk = await Livro.instance.findOne({ where: { id_usuario: id, nome: nome } });
+
+        if (Number(bk.pagina_atual) !== Number(bk.paginas)) {
+          return res.status(400).json("Você não pode avaliar um livro que não terminou.");
+        }
+
+        if (nota < 0 || nota > 10) {
+          return res.status(400).json("A nota do livro deve estar entre 0 e 10.");
+        }
+
+        bk.update({ rate: Number(nota) });
+
+        logger.info(`[rateBook]Livro ${nome} avaliado como nota ${nota}. - ${req.socket.remoteAddress}`);
+        return res.status(200).json(`Livro ${nome} avaliado como nota ${nota}.`);
+      }
+
+      else {
+        return res.status(400).json("Nome inválido");
+      }
+
+    } catch (error) {
+      logger.error(`[userBook]Erro de consulta (livros) : ${error}-  ${req.socket.remoteAddress}`);
+      return res.status(500).json(`${error}`);
+    }
+
   }
-  
+
 }
 
 export default controller;

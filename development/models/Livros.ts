@@ -72,6 +72,11 @@ export default class Livros {
                     allowNull: false,
                 },
 
+                rate: {
+                    type: DataTypes.TINYINT,
+                    allowNull: true,
+                },
+
                 palavras_chave: {
                     type: DataTypes.STRING(255),
                     allowNull: false,

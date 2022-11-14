@@ -1,0 +1,39 @@
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-11-14T22:19:11.029Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-11-14T22:19:11.323Z"}
+{"level":"info","message":"[cadastrar] Cliente cadastrado: ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:20:54.619Z"}
+{"level":"info","message":"[cadastrar] Cliente cadastrado: ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:21:11.911Z"}
+{"level":"info","message":"[newBook]Nova editora cadastrada: novatec -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:22:32.452Z"}
+{"level":"info","message":"[newBook]Novo autor cadastrado: Aurelio Marinho Jargas -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:22:32.455Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id') -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:22:32.555Z"}
+{"level":"info","message":"[newBook]Novo livro adicionado: Shell Script Profissional -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:22:34.564Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-11-14T22:28:06.947Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-11-14T22:28:07.037Z"}
+{"level":"error","message":"[userBook]Erro de consulta (livros) : TypeError: Cannot read properties of undefined (reading 'pagina_atual')-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:28:36.121Z"}
+{"level":"error","message":"[userBook]Erro de consulta (livros) : TypeError: Cannot read properties of undefined (reading 'pagina_atual')-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:28:38.909Z"}
+{"level":"info","message":"[setMarker] Página null do livro Shell Script Profissional marcada","service":"user-service","timestamp":"2022-11-14T22:30:19.613Z"}
+{"level":"error","message":"[userBook]Erro de consulta (livros) : TypeError: Cannot read properties of undefined (reading 'pagina_atual')-  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:30:40.230Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-11-14T22:32:18.174Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-11-14T22:32:18.293Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-11-14T22:32:25.123Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-11-14T22:32:25.235Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-11-14T22:32:49.969Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-11-14T22:32:50.067Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-11-14T22:33:01.036Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-11-14T22:33:01.135Z"}
+{"level":"info","message":"[setMarker] Página 5 do livro Shell Script Profissional marcada","service":"user-service","timestamp":"2022-11-14T22:34:07.249Z"}
+{"level":"info","message":"[rateBook]Livro Shell Script Profissional avaliado como nota 9. - ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:34:25.524Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-11-14T22:38:06.404Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-11-14T22:38:06.517Z"}
+{"level":"info","message":"[newBook]Novo autor cadastrado: Allen B. Downey -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:38:58.191Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id') -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:38:58.435Z"}
+{"level":"info","message":"[newBook]Novo livro adicionado: Pense em Python -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:39:00.360Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-11-14T22:40:45.165Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-11-14T22:40:45.256Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-11-14T22:41:04.697Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-11-14T22:41:04.834Z"}
+{"level":"info","message":"[setup] API aguardando requisições... [Porta TCP 8080]","service":"user-service","timestamp":"2022-11-14T22:41:06.421Z"}
+{"level":"info","message":"[hasConnection] Conexão ao banco de dados realizada.","service":"user-service","timestamp":"2022-11-14T22:41:06.522Z"}
+{"level":"info","message":"[newBook]Nova editora cadastrada: abc -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:41:46.199Z"}
+{"level":"info","message":"[newBook]Novo autor cadastrado: john doe -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:41:46.203Z"}
+{"level":"error","message":"[newBook]TypeError: Cannot read properties of null (reading 'id') -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:41:46.205Z"}
+{"level":"info","message":"[newBook]Novo livro adicionado: blabla -  ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-11-14T22:41:47.466Z"}
