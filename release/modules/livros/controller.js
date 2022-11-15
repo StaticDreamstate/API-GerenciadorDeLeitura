@@ -52,9 +52,10 @@ const controller = {
                     edicao: edicao,
                     isbn_id: nCodigo.id,
                     paginas: paginas,
-                    paginas_atual: 0,
-                    restante: 0,
-                    palavras_chave: palavrasChave
+                    pagina_atual: Number(0),
+                    restante: paginas,
+                    palavras_chave: palavrasChave,
+                    rate: Number(0)
                 });
                 yield models_1.Editora.instance.update({ total_livros: Number(at.total_livros + 1) }, { where: { id: ed.id } });
                 yield models_1.Autor.instance.update({ total_livros: Number(at.total_livros + 1) }, { where: { id: at.id } });
@@ -139,6 +140,34 @@ const controller = {
                 }
                 logger_1.default.info(`[userBook]Consulta (livros) do usuário ${myList.id_usuario} realizada. - ${req.socket.remoteAddress}`);
                 return res.status(200).json(myList);
+            }
+            catch (error) {
+                logger_1.default.error(`[userBook]Erro de consulta (livros) : ${error}-  ${req.socket.remoteAddress}`);
+                return res.status(500).json(`${error}`);
+            }
+        });
+    },
+    rateBook(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            try {
+                const { id } = req.params;
+                const { nome, nota } = req.body;
+                let bk;
+                if (nome.length > 0) {
+                    bk = yield models_1.Livro.instance.findOne({ where: { id_usuario: id, nome: nome } });
+                    if (Number(bk.pagina_atual) !== Number(bk.paginas)) {
+                        return res.status(400).json("Você não pode avaliar um livro que não terminou.");
+                    }
+                    if (nota < 0 || nota > 10) {
+                        return res.status(400).json("A nota do livro deve estar entre 0 e 10.");
+                    }
+                    bk.update({ rate: Number(nota) });
+                    logger_1.default.info(`[rateBook]Livro ${nome} avaliado como nota ${nota}. - ${req.socket.remoteAddress}`);
+                    return res.status(200).json(`Livro ${nome} avaliado como nota ${nota}.`);
+                }
+                else {
+                    return res.status(400).json("Nome inválido");
+                }
             }
             catch (error) {
                 logger_1.default.error(`[userBook]Erro de consulta (livros) : ${error}-  ${req.socket.remoteAddress}`);

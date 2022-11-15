@@ -55,6 +55,10 @@ class Livros {
                 type: sequelize_1.DataTypes.INTEGER,
                 allowNull: false,
             },
+            rate: {
+                type: sequelize_1.DataTypes.TINYINT,
+                allowNull: true,
+            },
             palavras_chave: {
                 type: sequelize_1.DataTypes.STRING(255),
                 allowNull: false,

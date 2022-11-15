@@ -20,7 +20,7 @@ export default class App {
         this.instance.use(Express.json());
         this.instance.use(Express.urlencoded({ extended: true }));
         this.instance.use(BaseRoutes);
-        
+
         const appPort = options.port ? options.port : this.defaultPort;
 
         if (options.test) {
@@ -40,6 +40,9 @@ export default class App {
         }
 
         mySqlConnection.hasConnection();
+    }
 
+    getInstance() {
+        return this.instance;
     }
 }

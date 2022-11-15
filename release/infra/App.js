@@ -44,5 +44,8 @@ class App {
             database_1.mySqlConnection.hasConnection();
         });
     }
+    getInstance() {
+        return this.instance;
+    }
 }
 exports.default = App;
